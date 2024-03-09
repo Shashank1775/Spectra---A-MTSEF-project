@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ast-lightcurve-database:data:lc_summary.csv</logical_identifier>
+    <version_id>4.0</version_id>
+    <title>LCDB Summary Table</title>
+    <information_model_version>1.16.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Citation_Information>
+      <author_list>Warner, B.D., Harris, A.W., and Pravec, P.</author_list>
+      <publication_year>2021</publication_year>
+      <description>This table summarizes the results reported in the Details table by listing what the LCDB authors consider to be the more likely period, amplitude, diameter, albedo, and H/G(12) values from among those details records. All amplitudes are peak-to-peak, not average-to-peak. This table is the foundation for the commonly seen frequency-diameter plots. The majority of details records have no date of observation and so have the default date of 1899-12-30; these are not considered when finding the START/STOPTIME values.</description>
+    </Citation_Information>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>1913-01-01Z</start_date_time>
+      <stop_date_time>2021-09-02Z</stop_date_time>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Science</purpose>
+      <processing_level>Derived</processing_level>
+      <Science_Facets>
+        <discipline_name>Small Bodies</discipline_name>
+        <facet1>Taxonomy</facet1>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>None</name>
+      <type>Other Investigation</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:individual.none</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>Literature search</name>
+        <type>Literature Search</type>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Multiple Asteroids</name>
+      <type>Asteroid</type>
+    </Target_Identification>
+  </Observation_Area>
+  <File_Area_Observational>
+    <File>
+      <file_name>lc_summary.csv</file_name>
+      <local_identifier>file</local_identifier>
+      <creation_date_time>2021-09-02</creation_date_time>
+    </File>
+    <Table_Delimited>
+      <local_identifier>TABLE</local_identifier>
+      <offset unit="byte">6937</offset>
+      <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+      <records>34967</records>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <field_delimiter>Comma</field_delimiter>
+      <Record_Delimited>
+        <fields>31</fields>
+        <groups>0</groups>
+        <Field_Delimited>
+          <name>Number</name>
+          <data_type>ASCII_Integer</data_type>
+          <unit>integer</unit>
+          <description>The permanent number assigned by the Minor Planet Center, if any.</description>
+          <Special_Constants>
+            <missing_constant>-9</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Name</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>The name assigned to the asteroid at the time of observations. If not named, the preliminary designation assigned by the MPC. It is possible that this will not match the name in the current version of the MPCORB file since the asteroid may have been named since the observations or it has a different designation.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Desig</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>The current MPC designation. N.B. An object may have one or more previous designations.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Family</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>The orbital group or collisional family. See the pds_readme.pdf, section 3.1.2 and Tables 3.1.2.2 and 3.1.2.3.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>CSource</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag indicating the source of the taxonomic class. See pds_readme.pdf, Table 4.1.4.1.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Class</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>The taxonomic class of the asteroid, usually based on the Tholen or Bus-DeMeo system. If the CSource flag indicates an assumed class, this is based on the orbital group or family.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>DiamSource</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag indicates the source for the assigned diameter, e.g., Calculated. See the pds_readme.pdf, Table 4.1.4.6.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>DiamFlag</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag indicates if the assigned diameter is a minimum or maximum value.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Diam</name>
+          <data_type>ASCII_Real</data_type>
+          <unit>km</unit>
+          <description>The effective diameter of the asteroid. This could be a direct measurement, e.g., IR observations, or based on using H and (assumed) albedo.</description>
+          <Special_Constants>
+            <missing_constant>-9.99</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>HSource</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag gives the source for the assigned H (absolute magnitude) of the asteroid, e.g., MPCOrb or the literature. See pds_readme.pdf, Table 4.1.4.2.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>H</name>
+          <data_type>ASCII_Real</data_type>
+          <unit>magnitude</unit>
+          <description>The absolute magnitude of the asteroid. Usually this is on the H-G system. If based on the H-G12 system, the HSource flag will indicate such.</description>
+          <Special_Constants>
+            <missing_constant>-9.99</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>HBand</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>The photometric band of the H magnitude, e.g., V (default), Sloan r' (SR), or 
+		  ATLAS (AO or AC). If not given explicitly or, very rarely, it cannot be safely inferred from the source, the default of V is used.</description>
+          <Special_Constants>
+            <missing_constant>V</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>GSource</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag indicates the source of the phase slope parameter (G) on the H-G12 system. See the pds_readme.pdf, section 3.1.1 and Table 4.1.4.4.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>G</name>
+          <data_type>ASCII_Real</data_type>
+          <unit>dimensionless value</unit>
+          <description>The phase slope parameter for the asteroid. If GSource is not 'G', then the value is G on the H-G System. If GSource = 'G' and there is no value for G2, the value is G1 on the H-G12 system. If there is a value for G2, then G is G1 on the H-G1,G2 system.</description>
+          <Special_Constants>
+            <missing_constant>-9.99</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>G2</name>
+          <data_type>ASCII_Real</data_type>
+          <unit>dimensionless value</unit>
+          <description>The second phase slope parameter for the asteroid on the H-G1,G2 system. </description>
+          <Special_Constants>
+            <missing_constant>-9.99</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>AlbSource</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag indicates the source of the assigned albedo, e.g., Assumed, Calculated. See the pds_readme.pdf, Table 4.1.4.7.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>AlbFlag</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>Indicates if the albedo is a minimum or maximum value.This flag indicates if the albedo value is a minimum or maximum.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Albedo</name>
+          <data_type>ASCII_Real</data_type>
+          <unit>Albedo</unit>
+          <description>The assigned albedo of the object. Unless otherwise indicated, this is pV (visual).</description>
+          <Special_Constants>
+            <missing_constant>-9.99</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>PFlag</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag indicates if the assigned period is a minimum or maximum value or if there is only a descriptive value, e.g., long. See the pds_readme.pdf, Table 4.1.5.2.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Period</name>
+          <data_type>ASCII_Real</data_type>
+          <unit>hours</unit>
+          <description>The rotation period of the asteroid. This is usually a synodic period. If sidereal (from a model), the PFlag field will indicate such.</description>
+          <Special_Constants>
+            <missing_constant>-9.99</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>PerDesc</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>When no numeric value for the period is available or can be reasonably inferred, , this field will give a description, e.g., long. The PFlag will be set in this case.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>AmpFlag</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag indicates if the AmpMax field is a minimum or maximum value. It does not apply to the AmpMin field. N.B. Amplitudes are peak-to-peak (P-P).</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>AmpMin</name>
+          <data_type>ASCII_Real</data_type>
+          <unit>magnitude</unit>
+          <description>This is the minimum reported lightcurve amplitude (P-P). It can be from the same source as the AmpMax value, or it can be from another source.</description>
+          <Special_Constants>
+            <missing_constant>-9.99</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>AmpMax</name>
+          <data_type>ASCII_Real</data_type>
+          <unit>magnitude</unit>
+          <description>This is the maximum reported lightcurve amplitude (P-P). It can be from the same source as the AmpMin value, or it can be from another source.</description>
+          <Special_Constants>
+            <missing_constant>-9.99</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>U</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>The reliability of the adopted period solution. Values 2-,2,2+,3-, and 3 are considered useful for statistical studies. See the pds_readme.pdf, section 4.1.2.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Notes</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This can consist of one or more single-character values that qualify the summary record. For example, T? would indicate the asteroid is a suspected tumbler. See the pds_readme.pdf, Table 4.1.5.3.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>IsBinary</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag indicates if the object is a suspected/confirmed binary asteroid or a multiple system (?=Suspected, B=Binary, M=Multiple).</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Pole</name>
+          <data_type>UTF8_String</data_type>
+          <unit>Boolean</unit>
+          <description>This flag indicates if a spin axis and/or shape model have been reported. One or more details records for the given asteroid will give more information, as will the lc_spinaxis table.</description>
+          <Special_Constants>
+            <missing_constant>N</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Survey</name>
+          <data_type>UTF8_String</data_type>
+          <unit>string</unit>
+          <description>This flag indicates if the results are from a wide-field survey and so should be used with caution for statistical studies. See the pds_readme.pdf, section 5, for a description of the possible values.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>ExNotes</name>
+          <data_type>UTF8_String</data_type>
+          <unit>Boolean</unit>
+          <description>This flag indicates if there are one or more entries for the object in the lc_exnotes (extended notes) table. That table includes extended notes from the summary and details tables.</description>
+          <Special_Constants>
+            <missing_constant>N</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Private</name>
+          <data_type>UTF8_String</data_type>
+          <unit>Boolean</unit>
+          <description>This flag indicates if public releases can include only a limited subset of information, e.g., object number/name and U rating, if any. The purpose is to advise that a result exists but is not available to the public.</description>
+          <Special_Constants>
+            <missing_constant>N</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+      </Record_Delimited>
+    </Table_Delimited>
+  </File_Area_Observational>
+</Product_Observational>
